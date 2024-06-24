@@ -3,12 +3,6 @@ from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 
 from .models import Patient, Scar, Tattoo
-from .models import (
-    GENDER_CHOICES, EYE_COLOR_CHOICES, SEX_CHOICES,
-    ETHNICITY_CHOICES, HAIR_COLOR_CHOICES, BLOOD_TYPE_CHOICES,
-    MEDICATION_CHOICES
-)
-
 
 class RegisterForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -30,16 +24,10 @@ class RegisterForm(UserCreationForm):
         return None
 
 class PatientForm(forms.ModelForm):
-    def __init__(self, *args, **kwargs):
-        super(PatientForm, self).__init__(*args, **kwargs)
-        self.fields['gender'] = forms.ChoiceField(choices=GENDER_CHOICES)
-        self.fields['sex'] = forms.ChoiceField(choices=SEX_CHOICES)
-        self.fields['eye_color'] = forms.ChoiceField(choices=EYE_COLOR_CHOICES)
-        self.fields['ethnicity'] = forms.ChoiceField(choices=ETHNICITY_CHOICES)
-        self.fields['hair_color'] = forms.ChoiceField(choices=HAIR_COLOR_CHOICES)
-        self.fields['blood_type'] = forms.ChoiceField(choices=BLOOD_TYPE_CHOICES)
-        self.fields['continuous_medication'] = forms.ChoiceField(choices=MEDICATION_CHOICES)
-
     class Meta:
         model = Patient
         fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(PatientForm, self).__init__(*args, **kwargs)
+        fields = ['date_of_birth', 'sex', 'eye_color', 'gender', 'blood_type', 'cpf', 'rg', 'continuous_medication', 'medication', 'state', 'hair_color', 'birthmark']

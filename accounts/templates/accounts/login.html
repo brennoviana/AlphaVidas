@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <title>Login</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/styles.css' %}">
-</head>
-<body>
-    <header class="header">
-        <h1>AlphaVidas</h1>
-    </header>
+{% extends '../base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
     <div class="container">
-        <h2>Login</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit">Login</button>
-        </form>
-        <div class="message">
-            <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+        <div class="login-box">
+            <h2>Login</h2>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <div class="message">
+                <p>Não tem uma conta? <a href="{% url 'register' %}">Realize o cadastro aqui!</a></p>
+            </div>
         </div>
     </div>
 </body>
 </html>
+{% endblock %}

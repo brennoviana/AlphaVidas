@@ -62,10 +62,35 @@ BLOOD_TYPE_CHOICES = [
     ('O-', 'O-'),
 ]
 
-MEDICATION_CHOICES = [
-    ('', '---'),
-    ('Sim', 'Sim'),
-    ('Nao', 'Não'),
+BRAZIL_CHOICES = [
+        ('', '---------------'),
+        ('AC', 'Acre'),
+        ('AL', 'Alagoas'),
+        ('AP', 'Amapá'),
+        ('AM', 'Amazonas'),
+        ('BA', 'Bahia'),
+        ('CE', 'Ceará'),
+        ('DF', 'Distrito Federal'),
+        ('ES', 'Espírito Santo'),
+        ('GO', 'Goiás'),
+        ('MA', 'Maranhão'),
+        ('MS', 'Mato Grosso do Sul'),
+        ('MT', 'Mato Grosso'),
+        ('MG', 'Minas Gerais'),
+        ('PA', 'Pará'),
+        ('PB', 'Paraíba'),
+        ('PR', 'Paraná'),
+        ('PE', 'Pernambuco'),
+        ('PI', 'Piauí'),
+        ('RJ', 'Rio de Janeiro'),
+        ('RN', 'Rio Grande do Norte'),
+        ('RS', 'Rio Grande do Sul'),
+        ('RO', 'Rondônia'),
+        ('RR', 'Roraima'),
+        ('SC', 'Santa Catarina'),
+        ('SP', 'São Paulo'),
+        ('SE', 'Sergipe'),
+        ('TO', 'Tocantins'),
 ]
 
 class Patient(models.Model):
@@ -73,15 +98,17 @@ class Patient(models.Model):
     cpf = models.CharField(max_length=11)
     rg = models.CharField(max_length=9)
     date_of_birth = models.DateField()
-    gender = models.CharField(max_length=255)
-    sex = models.CharField(max_length=255)
-    eye_color = models.CharField(max_length=255)
-    ethnicity = models.CharField(max_length=255)
+    gender = models.CharField(max_length=255, choices=GENDER_CHOICES, default='')
+    sex = models.CharField(max_length=255, choices=SEX_CHOICES, default='')
+    eye_color = models.CharField(max_length=255, choices=EYE_COLOR_CHOICES, default='')
+    ethnicity = models.CharField(max_length=255, choices=ETHNICITY_CHOICES, default='')
     height = models.FloatField()
-    hair_color = models.CharField(max_length=255)
-    blood_type = models.CharField(max_length=255)
-    continuous_medication = models.CharField(max_length=255)
-    medication = models.CharField(max_length=255)
+    hair_color = models.CharField(max_length=255, choices=HAIR_COLOR_CHOICES, default='')
+    blood_type = models.CharField(max_length=255, choices=BLOOD_TYPE_CHOICES, default='')
+    continuous_medication = models.BooleanField(default=False)
+    medication = models.CharField(max_length=255, blank=True, null=True)
+    state = models.CharField(max_length=2, choices=BRAZIL_CHOICES, default='')
+    birthmark = models.BooleanField(default=False)
 
 class Tattoo(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
@@ -91,4 +118,3 @@ class Tattoo(models.Model):
 class Scar(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
     type = models.CharField(max_length=255)
-
