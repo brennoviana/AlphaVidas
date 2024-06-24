@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'accounts/css/styles.css' %}">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="navegacao">
+        <div class="logo">
+            <img src="image/alpha.cadastro.png" alt="">
+        </div><!--final div logo-->
+
+        <nav>
+            <ul class="list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro_pac.html">Cadastro</a></li>
+            </ul>
+        </nav><!--final nav-->
+    </header>
+    {% block content %}{% endblock %}
+</body>
+</html>
