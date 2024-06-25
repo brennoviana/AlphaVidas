@@ -1,11 +1,13 @@
 {% extends '../base.html' %}
 
+{% load static %}
+
 {% block title %}Login{% endblock %}
 
 {%block content%}
 <body class="tela">
     <div class="entra">
-        <img src="image/usuario1.png" alt="">
+        <img src="{% static 'image/usuario1.png' %}" alt="">
         <div class="acesso">
             <h1>Faça seu login</h1>
             <div class="login">
