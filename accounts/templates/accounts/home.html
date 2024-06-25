@@ -5,14 +5,26 @@
 
 {% block content %}
     <div class="fundo">
-        <div class="h1-home">
+        <div class="home-container">
+            <div class="home-box">
+                <h2>CENTRAL DE ATENDIMENTO</h2>
+                <img src="{% static 'image/telefono.png' %}"  alt="Phone Icon">
+                <p>2637-2703</p>
+            </div>
+            <div class="home-box">
+                <h2>ACESSE MEU ALPHA</h2>
+                <img src="{% static 'image/userAvatar.jpg' %}" alt="User Icon" id="userAvatar">
+            </div>
+            <div class="home-box">
+                <h2>NOSSAS REDES SOCIAIS</h2>
+                <div class="sci">
+                    <ul class="social">
+                        <li><p>Alpha.Vidas</p><a href="#"><img src="{% static 'image/facebook.png' %}" alt=""></a></li>
+                        <li><p>@Alpha_Vidas</p><a href="#"><img src="{% static 'image/instagram.png' %}" alt=""></a></li>
+                        <li><p>Alpha Vidas</p><a href="#"><img src="{% static 'image/whatsapp.png' %}" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="sci">
-            <ul class="social">
-                <li><a href="#"><img src="{% static 'image/facebook.png' %}" alt=""></a></li>
-                <li><a href="#"><img src="{% static 'image/instagram.png' %}" alt=""></a></li>
-                <li><a href="#"><img src="{% static 'image/whatsapp.png' %}" alt=""></a></li>
-            </ul>
-        </div>
-    </div>
+     </div>
 {% endblock %}

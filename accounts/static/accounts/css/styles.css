@@ -99,15 +99,9 @@ body::-webkit-scrollbar {
 }
 
 .container3{
-    /*background-image: url(image/teste2.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    background-size: 100%;
-    top: 0;
+    width: 100%;
+    bottom: 100;
 
 }
 
@@ -148,7 +142,7 @@ body::-webkit-scrollbar {
 }
 
 .fundo{
-    /*background-image: url(image/home.png);*/
+    background-image: url('../../image/home.png');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -169,16 +163,30 @@ body::-webkit-scrollbar {
     border-color: #005A9C;
 }
 
+.social{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    position:relative;
+}
+
+.social a{
+    text-decoration:none;
+}
+
+.social p{
+    font-size:24px;
+}
+
 .sci{
-    margin-left: auto;
-    width: 5%;
+    margin-right: auto;
+    width: 100%;
     height: fit-content;
 }
 
 .sci img{
     width: 90%;
-    margin: 20.5% 0;
-}
+    }
 
 .formulario{
     font-family: 'Poppins', Courier, monospace;
@@ -475,7 +483,7 @@ input[type=tel] {
 }
 
 .cadastro1{
-    /*background-image: url(image/home.png);*/
+    background-image: url('../../static/image/home.png');
     background-repeat:no-repeat;
     background-size: cover;
     position: relative;
@@ -506,16 +514,18 @@ input[type=tel] {
 
 
 .rodape{
-    background-color: #000000;
+    background-color: #F7F6F5;
     align-items: center;
-    height: 5vh;
+    height: 7vh;
     width: 100%;
     display: flex;
 }
 
 .rodape h4 {
-    color: #ffffff;
+    color:black;
     margin-left: 41%;
+    font-family: 'Poppins', Courier, monospace;
+
 }
 
 .tela {
@@ -547,13 +557,60 @@ input[type=tel] {
     margin-bottom: 12%;
 }
 
-.h1-home {
-    margin-left: 19%;
-    margin-bottom:25%;
+.home-container {
+    display: flex;
+    position:absolute;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    bottom:5rem;
+}
+
+.home-box {
+    background: #005A9C;
     color: white;
-    font-size: 220%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    height:16rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     font-family: 'Poppins', Courier, monospace;
 }
+
+.home-box h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.home-box img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    background:transparent;
+}
+
+.home-box #userAvatar{
+    width:150px;
+    height:150px;
+
+}
+
+.home-box p {
+    margin: 10px 0;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.home-box p img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;}
 
 .mensagem {
 
@@ -611,7 +668,7 @@ input[type=tel] {
 /* SOBRE */
 
 .div-sobre {
-    /*background-image: url(image/contato3.jpg);*/
+    background-image: url('../../image/contato3.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
@@ -773,7 +830,7 @@ input[type="date"] {
 }
 
 .fundo_contato{
-    /*background-image: url(image/medico-sobre.jpg);*/
+    background-image: url('../../image/medico-sobre.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
