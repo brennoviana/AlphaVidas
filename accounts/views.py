@@ -19,7 +19,6 @@ class AboutView(TemplateView):
 
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'
-    form_class = AuthenticationForm
 
 class UserRegisterView(TemplateView):
     patient_form_class = PatientForm
