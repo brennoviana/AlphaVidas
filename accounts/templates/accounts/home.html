@@ -1,45 +1,18 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../static/image/alpha.logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>AlphaVidas</title>
-</head>
-<body>
-    <header class="navegacao">
-        <div class="logo">
-            <img src="../../static/image/alpha.cadastro.png" alt="">
-        </div><!--final div logo-->
+﻿{% extends '../base.html' %}
+{% load static %}
 
-        <nav>
-            <ul class="list">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="cadastro_pac.html">Cadastro</a></li>
-            </ul>
-        </nav><!--final nav-->
-    </header>
+{% block title %}Login{% endblock %}
+
+{% block content %}
     <div class="fundo">
         <div class="h1-home">
-
         </div>
         <div class="sci">
-
             <ul class="social">
-                <li><a href="#"><img src="../../static/image/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="../../static/image/instagram.png" alt=""></a></li>
-                <li><a href="#"><img src="../../static/image/whatsapp.png" alt=""></a></li>
-            </ul><!--final ul social-->
-    
-        </div><!--final dic social-->
-
-    </div><!--final div fundo-->
-    <footer class="rodape">
-        <h4>© 2023 Desenvolvido por AlphaVidas</h4>
-    </footer>
-</body>
-</html>
+                <li><a href="#"><img src="{% static 'image/facebook.png' %}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'image/instagram.png' %}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'image/whatsapp.png' %}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

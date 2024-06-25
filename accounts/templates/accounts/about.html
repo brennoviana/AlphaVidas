@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../static/image/alpha.logo.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Sobre</title>
-</head>
-<body>
-</head>
-<body>
-    <header class="navegacao">
-        <nav>
-            <ul class="list">
-                <li><img src="../../static/image/alpha.cadastro.png" alt=""></li>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="cadastro_pac.html">Cadastro</a></li>
-            </ul>
-        </nav><!--final nav-->
-    </header>
+{% extends '../base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
     <div class="body-sobre">
         <div class="div-sobre">
             <div class="text-sobre">
@@ -68,3 +48,4 @@
     </div>
 </body>
 </html>
+{% endblock %}
