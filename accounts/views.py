@@ -69,15 +69,15 @@ class UserRegisterView(TemplateView):
 
     def validate_forms(self):
         return all([
-            self.patient_form.is_valid(),
             self.register_form.is_valid(),
+            self.patient_form.is_valid(),
             self.tattoo_form.is_valid(),
             self.scar_form.is_valid()
         ])
 
-    def save_forms(self):
-        self.patient_form.save()
+    def save_forms(self, request):
         self.register_form.save()
+        self.patient_form.save(request)
         self.tattoo_form.save()
         self.scar_form.save()
 

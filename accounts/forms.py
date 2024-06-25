@@ -30,7 +30,16 @@ class PatientForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(PatientForm, self).__init__(*args, **kwargs)
-        fields = ['date_of_birth', 'sex', 'eye_color', 'gender', 'blood_type', 'cpf', 'rg', 'continuous_medication', 'medication', 'state', 'hair_color', 'birthmark', 'telephone']
+        self.fields['date_of_birth'] = forms.DateField(widget=forms.DateInput(attrs={'type': 'date'}))
+
+    def save(self, request, commit=True):
+        if commit:
+            patient = super().save(commit=False)
+            patient.user = request.user.id
+            patient.save()
+            return patient
+        else:
+            return super().save(commit=False)
 
 
 class TattooForm(forms.ModelForm):
