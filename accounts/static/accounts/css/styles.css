@@ -261,7 +261,7 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
-.password{
+.password {
     width: 60%;
     height: 35px;
     border-color: #005A9C;

@@ -4,30 +4,25 @@
 
 {% block title %}Login{% endblock %}
 
-{%block content%}
+{% block content %}
 <body class="tela">
     <div class="entra">
         <img src="{% static 'image/usuario1.png' %}" alt="">
         <div class="acesso">
             <h1>Faça seu login</h1>
             <div class="login">
-                <form>
-                <input type="" name="email" placeholder=" E-mail" class="email">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <div>
+                        <input type="checkbox" id="lembrar" name="lembrar" class="lembrar">
+                        <label for="lembrar">Lembre-me</label>
+                        <label for="esqueceu" class="esqueceu">Esqueceu a senha?</label>
+                    </div>
+                    <button type="submit" class="entrar">Entrar</button>
+                    <a href="cadastro_pac.html"><button class="cancelar">Cancelar</button></a>
                 </form>
-                <form>
-                    <input type="" name="senha" placeholder=" Digite sua Senha" class="password">
-                </form>
-            <div>
-                <input type="checkbox" id="lembrar" name="lembrar" class="lembrar" checked>
-                <label for="lembrar">Lembre-me</label>
-                <label for="esqueceu" class="esqueceu">Esqueceu a senha?</label>
-            </div><!--final div-->
-            <div>
-                <button type="submit" class="entrar">Entrar</button>
-                <a href="cadastro_pac.html"><button class="cancelar">Cancelar</button></a>
-            </div><!--final div login-->
-        </div><!--final div acesso-->    
-    </div><!--final div entra-->   
-{%endblock%}
-</body>
-</html>
+            </div>
+        </div>
+    </div>
+{% endblock %}

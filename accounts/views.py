@@ -1,4 +1,6 @@
-from django.shortcuts import redirect
+from pyexpat.errors import messages
+
+from django.shortcuts import redirect, render
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, TemplateView
 from django.contrib.auth.views import LoginView
@@ -7,6 +9,23 @@ from django.contrib.auth.forms import AuthenticationForm
 
 from .models import Patient
 from .forms import RegisterForm, PatientForm, TattooForm, ScarForm
+
+
+def login_view(request):
+    if request.method == "POST":
+        form = AuthenticationForm(request, data=request.POST)
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password')
+            user = authenticate(username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+        else:
+            messages.error(request, "Invalid username or password.")
+    else:
+        form = AuthenticationForm()
+    return render(request=request, template_name="accounts/login.html", context={"form": form})
 
 
 class HomeView(TemplateView):
