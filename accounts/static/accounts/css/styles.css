@@ -99,15 +99,8 @@ body::-webkit-scrollbar {
 }
 
 .container3{
-    /*background-image: url(image/teste2.jpg);*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
     right: 0;
     width: 50%;
-    height: 100%;
-    background-size: 100%;
-    top: 0;
 
 }
 
