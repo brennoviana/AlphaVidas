@@ -14,10 +14,10 @@
 
         <nav>
             <ul class="list">
-                <li><a href="home.html">Home</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
-                <li><a href="cadastro_pac.html">Cadastro</a></li>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">Sobre</a></li>
+                <li><a href="{% url 'contact' %}">Contato</a></li>
+                <li><a href="{% url 'register' %}">Cadastro</a></li>
             </ul>
         </nav><!--final nav-->
     </header>

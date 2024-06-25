@@ -8,6 +8,15 @@ from .models import Patient
 from .forms import RegisterForm, PatientForm
 
 
+class HomeView(TemplateView):
+    template_name = 'accounts/home.html'
+
+class ContactView(TemplateView):
+    template_name = 'accounts/contact.html'
+
+class AboutView(TemplateView):
+    template_name = 'accounts/about.html'
+
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'
     form_class = AuthenticationForm
