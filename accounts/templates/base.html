@@ -7,19 +7,19 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <header class="navegacao">
-        <div class="logo">
-            <img src="../../static/image/alpha.cadastro.png" alt="">
-        </div><!--final div logo-->
-
+    <header class="navegacao" id="header">
+        <img class="img_header" src="../../static/image/alpha.cadastro.png" alt="">
         <nav>
-            <ul class="list">
+            <ul class="list">\
                 <li><a href="home.html">Home</a></li>
                 <li><a href="sobre.html">Sobre</a></li>
                 <li><a href="contato.html">Contato</a></li>
                 <li><a href="cadastro_pac.html">Cadastro</a></li>
             </ul>
         </nav><!--final nav-->
+        <div>
+            <p>.</p>
+        </div>
     </header>
     {% block content %}{% endblock %}
 </body>

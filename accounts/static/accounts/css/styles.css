@@ -111,41 +111,37 @@ body::-webkit-scrollbar {
 
 }
 
-.navegacao{
-    width: 100%;
-    height: 75px;
-    position: relative;
-    z-index: 1;
-}
+
 
 .list{
+    width: 100%;
     display: flex;
-    margin-left: 30%;
-    position: absolute
+    text-align: center;
+    padding: 0;
 }
+
 
 .list li{
     margin-left: 85px;
     font-size: 125%;
     margin-top: 25px;
+
 }
 
 .list li a{
-    color: #778188;
+    width: 100%;
+    color: #ffffff;
     font-family: 'Poppins', Courier, monospace;
     font-size: 20px;
     font-weight: bold;
-
+    padding: 0;
 }
 
-.logo img{
-    width: 60px;
-    height: 60px;
-    margin-left: 27%;
-    position: absolute;
-    margin-top: 10px;
-
+.img_header {
+    width: 70px;
+    height: 70px;
 }
+
 
 .fundo{
     /*background-image: url(image/home.png);*/
@@ -287,7 +283,7 @@ body::-webkit-scrollbar {
     transform: translate(-50%,-40%);
     border-color: rgb(104, 18, 18);
     border-radius: 10px;
-    margin-top: 19%;
+    margin-top: 40%;
 }
 
 .cor{
@@ -295,13 +291,20 @@ body::-webkit-scrollbar {
 }
 
 .ficha{
-    margin-top: 3%;
+    height: 66vh;
+    background-image: url('../../image/teste_register.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
 }
 .ficha label{
+    position: relative;
+    top: 45%;
     font-weight: bold;
     color: #005A9C;
-    font-size: 240%;
-    margin-left: 15%;
+    font-size: 400%;
+    font-weight: 600;
     font-family: 'Poppins', Courier, monospace;
 
 }
@@ -312,12 +315,35 @@ body::-webkit-scrollbar {
     cursor: pointer;
 }
 
+.navegacao {
+    z-index: 1;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+    transition: 0.5s;
+}
+
+
+.navegacao.rolagem {
+    background-color: #ffffff;
+    padding: 20px 2%;
+}
+
+.navegacao.rolagem a {
+    color:#005A9C;
+    padding: 20px 4%;
+}
 .navegacao1{
     width: 100%;
     height: 75px;
     position: relative;
     z-index: 1;
     background-color: #ffffff;
+    justify-content: space-between;
 
 }
 .nome{
