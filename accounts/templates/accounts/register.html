@@ -81,7 +81,11 @@
                 <div class="full">
                     <label for="hair_color">Cor natural do cabelo: {{ patient_form.hair_color }}</label>
                 </div>
+                <div class="full">
+                    <label for="altura">Altura: {{ patient_form.height }}</label>
+                </div>
             </div>
+
             <input type="reset" class="redefinir" value="Apagar tudo">
             <div class="div-button">
                 <button type="submit" class="concluir">Concluir</button>
@@ -96,4 +100,6 @@
             header.classList.toggle('rolagem', window.scrollY > 0)
         })
     </script>
+{% endblock %}
+{%block footer%}
 {% endblock %}

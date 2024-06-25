@@ -8,17 +8,19 @@
 </head>
 <body>
     <header class="navegacao" id="header">
-        <img class="img_header" src="../../static/image/alpha.cadastro.png" alt="">
+        <img class="img_header" src="{% static 'image/alpha.cadastro.png' %}" alt="">
         <nav>
             <ul class="list">
                 <li><a href="{% url 'home' %}">Home</a></li>
                 <li><a href="{% url 'about' %}">Sobre</a></li>
                 <li><a href="{% url 'contact' %}">Contato</a></li>
-                <li><a href="{% url 'register' %}">Cadastro</a></li>
+                <li><a href="{% url 'cadastro_pac' %}">Cadastro</a></li>
             </ul>
         </nav>
         <div></div>
     </header>
     {% block content %}{% endblock %}
+    {%block footer%}
+    {% endblock %}
 </body>
 </html>

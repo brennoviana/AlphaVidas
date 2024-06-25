@@ -1,5 +1,7 @@
 {% extends '../base.html' %}
 
+{% load static %}
+
 {% block title %}Login{% endblock %}
 
 {% block content %}
@@ -34,18 +36,19 @@
                     </h3>
                 </div>
                 <div class="img-sobre">
-                    <img src="../../static/image/gente.jpg" alt="gente">
+                    <img src="{% static 'image/gente.jpg' %}" alt="gente">
                 </div>
             </div>
             <div class="alpha-logo">
-                <img src="../../static/image/alpha.logo1.png" alt="">
+                <img src="{% static 'image/alpha.logo1.png' %}" alt="">
             </div>
         </div>
-        <footer class="rodape">
-            <h4>© 2024 Desenvolvido por AlphaVidas</h4>
-        </footer>
-
     </div>
-</body>
-</html>
+{% endblock %}
+{%block footer%}
+<div class="container3">
+    <footer class="rodape">
+            <h4>© 2024 Desenvolvido por AlphaVidas</h4>
+    </footer>
+</div>
 {% endblock %}

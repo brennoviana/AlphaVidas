@@ -1,19 +1,33 @@
 {% extends '../base.html' %}
 
+{% load static %}
+
 {% block title %}Login{% endblock %}
 
-{% block content %}
-    <div class="container">
-        <div class="login-box">
-            <h2>Login</h2>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit" class="btn">Login</button>
-            </form>
-            <div class="message">
-                <p>Não tem uma conta? <a href="{% url 'register' %}">Realize o cadastro aqui!</a></p>
-            </div>
-        </div>
-    </div>
-{% endblock %}
+{%block content%}
+<body class="tela">
+    <div class="entra">
+        <img src="{% static 'image/usuario1.png' %}" alt="">
+        <div class="acesso">
+            <h1>Faça seu login</h1>
+            <div class="login">
+                <form>
+                <input type="" name="email" placeholder=" E-mail" class="email">
+                </form>
+                <form>
+                    <input type="" name="senha" placeholder=" Digite sua Senha" class="password">
+                </form>
+            <div>
+                <input type="checkbox" id="lembrar" name="lembrar" class="lembrar" checked>
+                <label for="lembrar">Lembre-me</label>
+                <label for="esqueceu" class="esqueceu">Esqueceu a senha?</label>
+            </div><!--final div-->
+            <div>
+                <button type="submit" class="entrar">Entrar</button>
+                <a href="cadastro_pac.html"><button class="cancelar">Cancelar</button></a>
+            </div><!--final div login-->
+        </div><!--final div acesso-->    
+    </div><!--final div entra-->   
+{%endblock%}
+</body>
+</html>

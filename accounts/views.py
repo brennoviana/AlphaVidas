@@ -21,6 +21,9 @@ class AboutView(TemplateView):
 class UserLoginView(LoginView):
     template_name = 'accounts/login.html'
 
+class UserCadastroPac(TemplateView):
+    template_name = 'accounts/cadastro_pac.html'
+
 class UserRegisterView(TemplateView):
     patient_form_class = PatientForm
     register_form_class = RegisterForm
@@ -64,20 +67,20 @@ class UserRegisterView(TemplateView):
     def post(self, request, *args, **kwargs):
         self.init_forms(request.POST)
         if self.validate_forms():
-            self.save_forms()
+            self.save_forms(request)
         return redirect(self.success_url)
 
     def validate_forms(self):
         return all([
-            self.patient_form.is_valid(),
             self.register_form.is_valid(),
+            self.patient_form.is_valid(),
             self.tattoo_form.is_valid(),
             self.scar_form.is_valid()
         ])
 
-    def save_forms(self):
-        self.patient_form.save()
+    def save_forms(self, request):
         self.register_form.save()
+        self.patient_form.save(request)
         self.tattoo_form.save()
         self.scar_form.save()
 
