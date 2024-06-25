@@ -10,6 +10,10 @@
         <form class="form-cadastro" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="full">
+                <label for="nome" class="nomecadastro">Nome de usuario: {{ register_form.username }}</label>
+            </div>
+
+            <div class="full">
                 <label for="nome" class="nomecadastro">Nome: {{ register_form.first_name }}</label>
                 <label for="sobrenome" class="nomecadastro">Sobrenome: {{ register_form.last_name }}</label>
             </div>
@@ -45,27 +49,18 @@
             </div>
 
             <div class="full">
-                <label for="tatuagem">Possui Tatuagem?</label>
-                {{ patient_form.tattoo }}
-
-                <label for="tatuagem_description">Se sim, descreva:</label>
-                <input type="text" name="tatuagem_description" placeholder="Descreva a tatuagem">
+                <label for="tatuagem">Possui Tatuagem? {{ tattoo_form.has_tattoo }}</label>
+                <label for="tatuagem_description">Se sim, descreva: {{ tattoo_form.description }}</label>
             </div>
 
             <div class="full">
-                <label for="telefone">Telefone:</label>
-                <input type="tel" name="usertel" placeholder="Digite seu telefone" required>
-
-                <label for="uf">Informe o estado de residência:</label>
-                {{ patient_form.state }}
+                <label for="telefone">Telefone: {{ patient_form.telephone }}</label>
+                <label for="uf">Informe o estado de residência: {{ patient_form.state }}</label>
             </div>
 
             <div class="full">
-                <label for="hair_color">Cor natural do cabelo:</label>
-                {{ patient_form.hair_color }}
-
-                <label for="birthmark">Possui marca de nascença?</label>
-                {{ patient_form.birthmark }}
+                <label for="hair_color">Cor natural do cabelo: {{ patient_form.hair_color }}</label>
+                <label for="birthmark">Possui marca de nascença: {{ patient_form.birthmark }}</label>
             </div>
 
             <input type="reset" class="redefinir" value="Apagar tudo">

@@ -30,4 +30,24 @@ class PatientForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(PatientForm, self).__init__(*args, **kwargs)
-        fields = ['date_of_birth', 'sex', 'eye_color', 'gender', 'blood_type', 'cpf', 'rg', 'continuous_medication', 'medication', 'state', 'hair_color', 'birthmark']
+        fields = ['date_of_birth', 'sex', 'eye_color', 'gender', 'blood_type', 'cpf', 'rg', 'continuous_medication', 'medication', 'state', 'hair_color', 'birthmark', 'telephone']
+
+
+class TattooForm(forms.ModelForm):
+    class Meta:
+        model = Tattoo
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(TattooForm, self).__init__(*args, **kwargs)
+        fields = ['has_tattoo', 'type', 'description']
+
+
+class ScarForm(forms.ModelForm):
+    class Meta:
+        model = Scar
+        fields = '__all__'
+
+    def __init__(self, *args, **kwargs):
+        super(ScarForm, self).__init__(*args, **kwargs)
+        fields = ['has_scar', 'type', 'description']

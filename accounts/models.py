@@ -97,6 +97,7 @@ class Patient(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     cpf = models.CharField(max_length=11)
     rg = models.CharField(max_length=9)
+    telephone = models.CharField(max_length=11, blank=True, null=True)
     date_of_birth = models.DateField()
     gender = models.CharField(max_length=255, choices=GENDER_CHOICES, default='')
     sex = models.CharField(max_length=255, choices=SEX_CHOICES, default='')
@@ -112,9 +113,11 @@ class Patient(models.Model):
 
 class Tattoo(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    has_tattoo = models.BooleanField(default=False)
     type = models.CharField(max_length=255)
     description = models.TextField()
 
 class Scar(models.Model):
     patient = models.ForeignKey(Patient, on_delete=models.CASCADE)
+    has_scar = models.BooleanField(default=False)
     type = models.CharField(max_length=255)

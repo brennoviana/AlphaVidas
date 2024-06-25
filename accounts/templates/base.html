@@ -7,8 +7,15 @@
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
+<<<<<<< Updated upstream
     <header class="navegacao" id="header">
         <img class="img_header" src="../../static/image/alpha.cadastro.png" alt="">
+=======
+    <header class="navegacao">
+        <div class="logo">
+            <img src="{% static 'image/alpha.cadastro.png' %}" alt="">
+        </div>
+>>>>>>> Stashed changes
         <nav>
             <ul class="list">
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -19,10 +26,13 @@
         </nav>
     </header>
     {% block content %}{% endblock %}
+<<<<<<< Updated upstream
     <div class="container3">
         <footer class="rodape">
                 <h4>© 2024 Desenvolvido por AlphaVidas</h4>
         </footer>
     </div>
+=======
+>>>>>>> Stashed changes
 </body>
 </html>
