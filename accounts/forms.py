@@ -35,7 +35,7 @@ class PatientForm(forms.ModelForm):
     def save(self, request, commit=True):
         if commit:
             patient = super().save(commit=False)
-            patient.user = request.user.id
+            patient.user_id = request.user.id
             patient.save()
             return patient
         else:
