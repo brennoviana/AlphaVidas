@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="image/alpha.logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>AlphaVidas</title>
+</head>
+<body class="cor">
+    <header class="navegacao1">
+        <div class="logo">
+            <img src="../../static/image/alpha.cadastro.png" alt="">
+        </div><!--final div logo-->
+
+        <nav>
+            <ul class="list">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="cadastro_pac.html">Cadastro</a></li>
+            </ul>
+        </nav><!--final nav-->
+    </header>
+
+    <div class="cor">
+
+    </div><!--final div cor-->
+
+
+    <div class="cadastro">
+
+        <div class="ficha">
+            <img src="image/cadastronovo.png" alt="">
+            <label for="">Cadastro AlphaVidas</label>
+
+        </div><!--final div ficha-->
+        <form class="form-cadastro">
+            <div class="full">
+                <label for="nome" class="nomecadastro">Nome do paciente: </label>  
+                <input required type="text" placeholder=" Nome completo*" required>
+                <label>E-mail:</label>
+                <input required type="email" name="email1" class="emailcadastro" placeholder=" E-mail*">
+            </label>
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label>Informe uma senha:</label>
+            <input required type="password" placeholder=" Digite a senha*" required> 
+            
+            <label for="etnia">Informe a etnia do paciente: </label>
+                <select name="etnia" id="">
+                    <option value="selecione">---------------</option>
+                    <option value="branco">Branco(a)</option>
+                    <option value="pardo">Pardo(a)</option>
+                    <option value="preto">Preto(a)</option>
+                    <option value="amarelo">Amarelo(a)</option>
+                    <option value="indigena">Indígeno(a)</option>
+                </select>  
+                
+            </div><!--final div full-->
+            
+            <div class="full">
+                
+                <label>Digite a senha novamente:</label>
+                <input required type="password" placeholder=" Digite a senha novamente*">
+                
+                <label for="nascimento">Data de Nascimento:</label>
+                <input required type="date" name="nascimento" class="nascimento">
+                
+            </div><!--final div full-->
+            
+            <div class="full">
+                
+            <label>Sexo:</label>
+            <label for="feminino">Feminino</label>
+            <input required type="radio" id="feminino" name="sexo" value="feminino">
+            <label for="masculino">Masculino</label>
+            <input required type="radio" id="masculino" name="sexo" value="masculino">
+            
+            <label>Cor do olhos:</label>
+            <select name="cor" id="olhos">
+                <option value="selecione">---------------</option>
+                <option value="Azul">Azul</option>
+                <option value="Azuis">Azuis esverdeados</option>
+                <option value="Acinzentados">Acinzentados</option>
+                <option value="Castanho">Castanho</option>
+                <option value="Verde">Verde</option>
+                <option value="avela">avelã</option>
+                <option value="ambar">Âmbar</option>
+                <option value="selecione">Preto</option>
+            </select>
+            
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label>Informe o gênero do paciente:</label>
+            <select name="etnia" id="">
+                <option value="selecione">---------------</option>
+                <option value="feminino">Feminino</option>
+                <option value="masculino">Masculino</option>
+                <option value="naodizer">Prefiro não dizer</option>
+                
+            </select>  
+            <label for="fator"> Tipo sangíneo:</label>
+            <input required type="text" placeholder=" Fator Rh*" required>
+            
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label>CPF:</label>
+            <input required type="text" name="cpf" placeholder=" 000.000.000-00*" required>
+            <label>RG:</label>
+            <input required type="text" name="rg" placeholder=" 00.000.000-00*" required>
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label for="">Faz uso de medicamento contínuo?*</label>
+            <label class="label-medicamento" for="sim">Sim</label>
+            <input required type="radio" id="sim" name="medicamento" value="sim">
+            <label for="nao">Não</label>
+            <input required type="radio" id="sim" name="medicamento" value="nao">
+            <label for="">Se sim, quais?</label>
+            <input required type="text" placeholder=" Nome da medicação">
+            
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label for="">Possui Tatuagem?</label>
+            <select name="tatuagem" id="">
+                <option value="selecione">---------------</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            
+            <label for="tatuagem">Se sim, descreva:</label>
+            <input required type="text" placeholder=" Descreva a tatuagem">
+            
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label>Telefone:</label>
+            <input required type="tel" name="usertel" placeholder="Digite seu telefone*" class="telefone" required>
+            <label for="">Informe o estado de residência: </label>
+            <select id="UF" name="UF">
+                <option value="">---------------</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div><!--final div full-->
+        <div class="full">
+            <label for="">Cor natural do cabelo</label>
+            <select name="cabelo" id="cabelo">
+                <option value="loiro">---------------</option>
+                <option value="loiro">Loiro</option>
+                <option value="Castanho">Castanho</option>
+                <option value="ruivo">Ruivo</option>
+                <option value="moreno">Moreno</option>
+                <option value="branco">Branco</option>
+            </select>
+            
+            <label for="">Possui marca de nascença?</label>
+            <select name="marca" id="">
+                <option value="selecione">---------------</option>
+                <option value="sim">Sim</option>
+                <option value="nao">Não</option>
+            </select>
+            
+            
+        </div><!--final div full-->
+        
+        <div class="full">
+            <label>Documentos médicos: </label>
+            <input required type="file" name="arquivos" class="arquivos"><br>
+            
+            
+        </div><!--final div full-->
+        
+        <input required type="reset" class="redefinir" value="Apagar tudo">
+        <div class="div-button">
+            <a href=""><button class="concluir">Concluir</button></a>
+            <a href="home.html"><button class="cancelar">Cancelar</button></a>
+        </div>
+    </form>
+
+    <div class="enviar-div">
+        <a href="cadastro1.html"><button class="enviar">Enviar Formulário</button></a>
+    </div>
+
+        
+    </div><!--final div cadastro-->
+
+
+</body>
+</html> 
+
