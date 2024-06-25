@@ -67,7 +67,7 @@ class UserRegisterView(TemplateView):
     def post(self, request, *args, **kwargs):
         self.init_forms(request.POST)
         if self.validate_forms():
-            self.save_forms()
+            self.save_forms(request)
         return redirect(self.success_url)
 
     def validate_forms(self):
