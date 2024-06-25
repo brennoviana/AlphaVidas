@@ -9,60 +9,79 @@
     <div class="cadastro">
         <form class="form-cadastro" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
-            <div class="full">
-                <label for="nome" class="nomecadastro">Nome de usuario: {{ register_form.username }}</label>
+            <div class="right">
+                <div class="full">
+                    <label for="nome" class="nomecadastro">Nome de usuario: {{ register_form.username }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="nome" class="nomecadastro">Nome: {{ register_form.first_name }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="password1">Senha: {{ register_form.password1 }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="email">E-mail: {{ register_form.email }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="sex">Sexo: {{ patient_form.sex }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="gender">Informe o Gênero: {{ patient_form.gender }}</label>
+                </div>
+    
+                <div class="full">
+                    <label for="cpf">CPF: {{ patient_form.cpf }}</label>
+                </div>
+    
+                <div class="medicamento">
+                    <label for="continuous_medication">Faz uso de medicamento contínuo:{{ patient_form.continuous_medication }}</label>
+                    <label for="medication">Se sim, quais: {{ patient_form.medication }}</label>
+                </div>
+    
+                <div class="tatuagem">
+                    <label for="tatuagem">Possui Tatuagem? {{ tattoo_form.has_tattoo }}</label>
+                    <label for="tatuagem_description">Se sim, descreva: <br> {{ tattoo_form.description }}</label>
+                </div>
             </div>
+            <div class="left">
+                <div class="full">
+                    <label for="sobrenome" class="nomecadastro">Sobrenome: {{ register_form.last_name }}</label>
+                </div>
 
-            <div class="full">
-                <label for="nome" class="nomecadastro">Nome: {{ register_form.first_name }}</label>
-                <label for="sobrenome" class="nomecadastro">Sobrenome: {{ register_form.last_name }}</label>
+                <div class="full">
+                    <label for="password2">Digite a senha novamente: {{ register_form.password2 }}</label>
+                </div>
+
+                <div class="full">
+                    <label for="date_of_birth">Data de Nascimento: {{ patient_form.date_of_birth }}</label>
+                </div>
+                <div class="full">
+                    <label for="eye_color">Cor dos olhos: {{ patient_form.eye_color }}</label>
+                </div>
+                <div class="full">
+                    <label for="blood_type">Tipo sanguíneo: {{ patient_form.blood_type }}</label>
+                </div>
+                <div class="full">
+                    <label for="rg">RG: {{ patient_form.rg }}</label>
+                </div>
+                <div class="full">
+                    <label for="telefone">Telefone: {{ patient_form.telephone }}</label>
+                </div>
+                <div class="full">
+                    <label for="uf">Informe o estado de residência: {{ patient_form.state }}</label>
+                </div>
+                <div class="full">
+                    <label for="birthmark">Possui marca de nascença: {{ patient_form.birthmark }}</label>
+                </div>
+                <div class="full">
+                    <label for="hair_color">Cor natural do cabelo: {{ patient_form.hair_color }}</label>
+                </div>
             </div>
-
-            <div class="full">
-                <label for="password1">Senha: {{ register_form.password1 }}</label>
-                <label for="password2">Digite a senha novamente: {{ register_form.password2 }}</label>
-            </div>
-
-            <div class="full">
-                <label for="email">E-mail: {{ register_form.email }}</label>
-                <label for="date_of_birth">Data de Nascimento: {{ patient_form.date_of_birth }}</label>
-            </div>
-
-            <div class="full">
-                <label for="sex">Sexo: {{ patient_form.sex }}</label>
-                <label for="eye_color">Cor dos olhos: {{ patient_form.eye_color }}</label>
-            </div>
-
-            <div class="full">
-                <label for="gender">Informe o gênero do paciente: {{ patient_form.gender }}</label>
-                <label for="blood_type">Tipo sanguíneo: {{ patient_form.blood_type }}</label>
-            </div>
-
-            <div class="full">
-                <label for="cpf">CPF: {{ patient_form.cpf }}</label>
-                <label for="rg">RG: {{ patient_form.rg }}</label>
-            </div>
-
-            <div class="full">
-                <label for="continuous_medication">Faz uso de medicamento contínuo: {{ patient_form.continuous_medication }}</label>
-                <label for="medication">Se sim, quais: {{ patient_form.medication }}</label>
-            </div>
-
-            <div class="full">
-                <label for="tatuagem">Possui Tatuagem? {{ tattoo_form.has_tattoo }}</label>
-                <label for="tatuagem_description">Se sim, descreva: {{ tattoo_form.description }}</label>
-            </div>
-
-            <div class="full">
-                <label for="telefone">Telefone: {{ patient_form.telephone }}</label>
-                <label for="uf">Informe o estado de residência: {{ patient_form.state }}</label>
-            </div>
-
-            <div class="full">
-                <label for="hair_color">Cor natural do cabelo: {{ patient_form.hair_color }}</label>
-                <label for="birthmark">Possui marca de nascença: {{ patient_form.birthmark }}</label>
-            </div>
-
             <input type="reset" class="redefinir" value="Apagar tudo">
             <div class="div-button">
                 <button type="submit" class="concluir">Concluir</button>
