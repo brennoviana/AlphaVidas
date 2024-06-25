@@ -3,11 +3,10 @@
 {% block title %}Register{% endblock %}
 
 {% block content %}
+    <div class="ficha">
+        <label for="">Cadastro AlphaVidas</label>
+    </div>
     <div class="cadastro">
-        <div class="ficha">
-            <img src="../../static/image/cadastronovo.png" alt="">
-            <label for="">Cadastro AlphaVidas</label>
-        </div>
         <form class="form-cadastro" method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             <div class="full">
@@ -76,4 +75,11 @@
             </div>
         </form>
     </div>
+
+    <script>
+        window.addEventListener("scroll", function(){
+            let header = document.querySelector('#header')
+            header.classList.toggle('rolagem', window.scrollY > 0)
+        })
+    </script>
 {% endblock %}
