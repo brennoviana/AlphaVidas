@@ -1,26 +1,18 @@
 ﻿{% extends '../base.html' %}
+{% load static %}
 
 {% block title %}Login{% endblock %}
 
 {% block content %}
     <div class="fundo">
         <div class="h1-home">
-
         </div>
         <div class="sci">
-
             <ul class="social">
-                <li><a href="#"><img src="../../static/image/facebook.png" alt=""></a></li>
-                <li><a href="#"><img src="../../static/image/instagram.png" alt=""></a></li>
-                <li><a href="#"><img src="../../static/image/whatsapp.png" alt=""></a></li>
-            </ul><!--final ul social-->
-    
-        </div><!--final dic social-->
-
-    </div><!--final div fundo-->
-    <footer class="rodape">
-        <h4>© 2023 Desenvolvido por AlphaVidas</h4>
-    </footer>
-</body>
-</html>
+                <li><a href="#"><img src="{% static 'image/facebook.png' %}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'image/instagram.png' %}" alt=""></a></li>
+                <li><a href="#"><img src="{% static 'image/whatsapp.png' %}" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
 {% endblock %}

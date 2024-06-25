@@ -10,8 +10,7 @@
     <header class="navegacao">
         <div class="logo">
             <img src="../../static/image/alpha.cadastro.png" alt="">
-        </div><!--final div logo-->
-
+        </div>
         <nav>
             <ul class="list">
                 <li><a href="{% url 'home' %}">Home</a></li>
@@ -19,8 +18,13 @@
                 <li><a href="{% url 'contact' %}">Contato</a></li>
                 <li><a href="{% url 'register' %}">Cadastro</a></li>
             </ul>
-        </nav><!--final nav-->
+        </nav>
     </header>
     {% block content %}{% endblock %}
+    <div class="container3">
+        <footer class="rodape">
+                <h4>© 2023 Desenvolvido por AlphaVidas</h4>
+        </footer>
+    </div>
 </body>
 </html>
